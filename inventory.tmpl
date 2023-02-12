@@ -1,0 +1,11 @@
+[jenkins]
+${jenkins_name} ansible_host=${jenkins_ip}
+
+[prod_servers]
+${prodserver_name} ansible_host=${prodserver_ip}
+
+[all_servers:children]
+jenkins
+prod_servers
+
+
